@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LJ talk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icon/chat icon.png" width="40px">
+                <h1>LJ talk</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <img src="icon/hamburger.png" width="50px" class="src">
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="users-window"> 
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4>3</h4>
+                </div>
+
+                <div class="users-list">
+                    <p>Gullu</p>
+                    <p>Juhu</p>
+                    <p>Sanju</p>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <div class="user-join">
+                        <p><b>Lakkhu </b>joined the chat</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Lakkhu</h5>
+                        <p>hello Juhu</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Lakkhu</h5>
+                        <p>hello Juhu</p>
+                    </div>
+                </div>
+                <div class="user-input">
+                    <input type="text" placeholder="type karo bey....">
+                    <button>SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var uwindow=document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display=="block"){
+                uwindow.style.display="none";
+        }
+        else{
+            uwindow.style.display="block";
+        }
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
